@@ -2,17 +2,28 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="dtbweb" />
+        <module name="common-lib" />
         <module name="account-api" />
         <module name="account-svc" />
-        <module name="common-lib" />
-        <module name="dtbweb" />
         <module name="dtfweb" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="account-api" target="1.8" />
+      <module name="account-svc" target="1.8" />
+      <module name="common-lib" target="1.8" />
+      <module name="dtbweb" target="1.8" />
+      <module name="dtfweb" target="1.8" />
+      <module name="dtonline" target="1.8" />
+      <module name="videoTwo-api" target="1.8" />
+      <module name="videotwo-svc" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
