@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- mapper 为根元素节点， 一个namespace对应一个dao -->
+<mapper namespace="cn.marssky.dtfweb.dao.ThreequestionDao">
+    <resultMap id="QusertionMap" type="cn.marssky.dtfweb.entities.Question" >
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="title" property="title" jdbcType="VARCHAR" />
+        <result column="subtitle" property="subtitle" jdbcType="VARCHAR"/>
+        <result column="avatar" property="avatar" jdbcType="INTEGER"/>
+        <result column="difficulty" property="difficulty" jdbcType="VARCHAR"/>
+        <result column="avatar_type" property="avatarType" jdbcType="VARCHAR"/>
+        <result column="sort" property="sort" jdbcType="INTEGER"/>
+        <result column="is_hide" property="isHide" jdbcType="TINYINT"/>
+        <result column="created_at" property="createdAt" jdbcType="VARCHAR"/>
+        <result column="updated_at" property="updatedAt" jdbcType="VARCHAR"/>
+        <result column="video" property="video" jdbcType="VARCHAR"/>
+        <result column="videoTime" property="videoTime" jdbcType="VARCHAR"/>
+        <result column="driverSchoolId" property="driverSchoolId" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <!--按机动车类型查询科目三视频数量-->
+    <select id="countByavatarType" parameterType="String" resultType="int">
+        select count(id) from escort_pro.three_question_banks where avatar_type = #{avatarType};
+    </select>
+
+    <!--按机动车类型查询科目三题库 编号，图片，标题-->
+    <select id="findByavatarType" parameterType="map" resultMap="QusertionMap">
+        SELECT id,title,avatar FROM escort_pro.three_question_banks WHERE avatar_type = #{avatarType};
+    </select>
+
+    <!--按id查询机动车的相关数据-->
+    <select id="findById" parameterType="Long" resultMap="QusertionMap">
+        SELECT id,title,subtitle,difficulty,avatar_type,updated_at,video,video_time FROM escort_pro.three_question_banks WHERE id = #{id};
+    </select>
+
+    <!--分组查询机动车类型-->
+    <select id="GroupByAvatarType" resultType="String">
+        SELECT avatar_type from escort_pro.three_question_banks group by avatar_type ;
+    </select>
+
+</mapper>

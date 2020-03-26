@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://v3.bootcss.com/favicon.ico">
+    <title>科目三考试项目</title>
+    <link href="./three/bootstrap.min.css" rel="stylesheet">
+    <link href="./three/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="./three/justified-nav.css" rel="stylesheet">
+    <script src="./three/ie-emulation-modes-warning.js"></script>
+  </head>
+  <body>
+    <div class="container" id="top">
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+        <h1>科目三</h1>
+        <p class="lead">科目三视频</p>
+      </div>
+      <!-- <div id="top"> -->
+          <form method="post" class="form-inline">
+              <select class="form-control" id="userStatus">
+                  <option  v-for="type in avatar_type.data">{{type}}</option>
+              </select>
+              <button type="button" class="btn btn-primary" @click="findByavatarType()">查询</button>
+          </form>
+      <!-- </div> -->
+      <!-- Example row of columns -->
+      <div class="row" v-for="(items,index) in questionlist">
+        <div class="col-lg-3" v-for="item in items">
+          <h3>{{item.title}}</h3>
+          <img :src="item.avatar" height="150" width="220"><br/>
+          <p></p>
+          <p><a class="btn btn-primary" role="button" @click="page(item.id)">视频讲解 »</a></p>
+        </div>
+      </div>
+      <!-- Site footer -->
+      <footer class="footer">
+        <p>© 2016 Company, Inc.</p>
+      </footer>
+    </div> 
+
+</body>
+    <script src="./three/ie10-viewport-bug-workaround.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+          (function () {
+            var ThreequestionTOP = new Vue({
+              el:"#top",
+              data:{
+                avatar_type:[],
+                question:[],
+                questionlist:"",
+                row_Num:0,
+              },mounted: function () {
+                var _self = this;
+                this.GroupByAvatarType();
+               // this.findByavatarType("小车");
+              },methods:{
+                GroupByAvatarType:function(){
+                  var _self = this;
+                  $.ajax({
+                    async: true,
+                    url: "Http://127.0.0.1:9090/GroupByAvatarType",
+                    contentType: "application/json;charset=UTF-8",
+                    type: "get"
+                  }).done(function (data) {
+                      _self.avatar_type = data;
+                      _self.findByavatarType(_self.avatar_type.data[0]);
+                  }).fail(function (xhr, status, error) {
+                      console.log("请求错误");
+                      console.log("状态码：" + status);
+                      console.log("异常信息:" + error);
+                  }).always(function (xhr, status) {
+                      console.log("执行完毕");
+                  });
+                },
+                findByavatarType:function(type){
+                  var _self = this;
+                  var avatarType;
+                  _self.questionlist = [];
+                  if(_self.row_Num==0){
+                    avatarType =type;
+                  }else{
+                    avatarType = $("#userStatus").val();
+                  }
+                  $.ajax({
+                    async: true,
+                    url: "Http://127.0.0.1:9090/findByavatarType/"+avatarType,
+                    contentType: "application/json;charset=UTF-8",
+                    type: "get"
+                  }).done(function (data) {
+                   _self.question = data;     
+                   _self.row_Num = Math.ceil(_self.question.data.length/4);              
+                   let index = 0;
+                    while(index< _self.question.data.length){
+                        _self.questionlist.push(_self.question.data.slice(index,index+=4))
+                    }
+                  }).fail(function (xhr, status, error) {
+                      console.log("请求错误");
+                      console.log("状态码：" + status);
+                      console.log("异常信息:" + error);
+                  }).always(function (xhr, status) {
+                      console.log("执行完毕");
+                  });
+                },
+                page:function(id){
+                    window.location.href="http://localhost:9090/tv.html?id="+id;
+                }
+              }
+            });
+          })();
+    </script>
+</html>

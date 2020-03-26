@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://v3.bootcss.com/favicon.ico">
+
+    <title>视频</title>
+    <link href="Starter%20Template%20for%20Bootstrap_files/bootstrap.css" rel="stylesheet">
+    <link href="Starter%20Template%20for%20Bootstrap_files/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="Starter%20Template%20for%20Bootstrap_files/starter-template.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="Starter%20Template%20for%20Bootstrap_files/ie-emulation-modes-warning.js"></script>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  </head>
+
+
+  <body>
+    <div class="container" id="video">
+      <div class="starter-template">
+        <h1>{{videoList.data.avatarType}}——{{videoList.data.title}}</h1>
+        <p class="lead">{{videoList.data.subtitle}}</p>
+      <div>
+          <video width="500" height="280" controls="controls">
+              <source :src="videoList.data.video" type="video/mp4">
+              <source src="#" type="video/ogg">
+              <source src="#" type="video/WebM">
+          </video>
+          <div><p v-if="videoList.data.difficulty==5"> 更新时间：{{videoList.data.updatedAt}} | 难度：★★★★★</p>
+               <p v-if="videoList.data.difficulty==4"> 更新时间：{{videoList.data.updatedAt}} | 难度：★★★★</p>
+               <p v-if="videoList.data.difficulty==3"> 更新时间：{{videoList.data.updatedAt}} | 难度：★★★</p>
+               <p v-if="videoList.data.difficulty==2"> 更新时间：{{videoList.data.updatedAt}} | 难度：★★</p>
+               <p v-if="videoList.data.difficulty==1"> 更新时间：{{videoList.data.updatedAt}} | 难度：★</p>
+          </div>
+      </div>
+      </div>
+    </div>
+</body>
+<script src="Starter%20Template%20for%20Bootstrap_files/bootstrap.js"></script>
+<script src="Starter%20Template%20for%20Bootstrap_files/ie10-viewport-bug-workaround.js"></script>
+<script>
+  (function () {
+    var tv = new Vue({
+        el:"#video",
+        data:{
+            videoList:[]
+        },mounted: function () {
+              this.video();  
+        },methods:{
+          video:function(){
+                  var _self = this;
+                  $.ajax({
+                    async: true,
+                    url: "Http://127.0.0.1:9090/findById/"+_self.GetQueryString("id"),
+                    contentType: "application/json;charset=UTF-8",
+                    type: "get"
+                  }).done(function (data) {
+                     _self.videoList = data;
+                     console.log(_self.videoList)
+                  }).fail(function (xhr, status, error) {
+                      console.log("请求错误");
+                      console.log("状态码：" + status);
+                      console.log("异常信息:" + error);
+                  }).always(function (xhr, status) {
+                      console.log("执行完毕");
+                  });
+                },
+            GetQueryString:function(name){
+            var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if(r!=null)
+                 return  unescape(r[2]);
+            return null;
+          }
+        }
+    })
+  })();
+</script>
+</html>
