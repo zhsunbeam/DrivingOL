@@ -14,36 +14,36 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SignController {
 
-    @Autowired
-    AccountClient accountClient;
-
-
-    /*****************/
-    /*        注释   */
-    /*****************/
-
-    @RequestMapping("/signIn")
-    @ResponseBody
-    public String singIn(@RequestParam(value = "name", required = false) String name,
-                                         @RequestParam(value = "email") String email,
-                                         @RequestParam(value = "password") String password) {
-        System.out.println("登录");
-
-        CreateAccountRequest accountRequest = new CreateAccountRequest();
-        accountRequest.setEmail(email);
-        accountRequest.setPassword(password);
-        System.out.println(this.accountClient);
-        GenericAccountResponse response = null;
-
-        try {
-            response = this.accountClient.createAccount(accountRequest);
-        }
-        catch(Exception e) {
-            String errMsg = "创建会员失败";
-        }
-
-        //返回的字符串根据上面业务逻辑确定
-
-        return "";
-    }
+//    @Autowired
+//    AccountClient accountClient;
+//
+//
+//    /*****************/
+//    /*        注释   */
+//    /*****************/
+//
+//    @RequestMapping("/signIn")
+//    @ResponseBody
+//    public String singIn(@RequestParam(value = "name", required = false) String name,
+//                                         @RequestParam(value = "email") String email,
+//                                         @RequestParam(value = "password") String password) {
+//        System.out.println("登录");
+//
+//        CreateAccountRequest accountRequest = new CreateAccountRequest();
+//        accountRequest.setEmail(email);
+//        accountRequest.setPassword(password);
+//        System.out.println(this.accountClient);
+//        GenericAccountResponse response = null;
+//
+//        try {
+//            response = this.accountClient.createAccount(accountRequest);
+//        }
+//        catch(Exception e) {
+//            String errMsg = "创建会员失败";
+//        }
+//
+//        //返回的字符串根据上面业务逻辑确定
+//
+//        return "";
+//    }
 }

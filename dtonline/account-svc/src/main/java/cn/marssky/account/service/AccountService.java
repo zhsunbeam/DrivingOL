@@ -1,35 +1,87 @@
 package cn.marssky.account.service;
 
-import cn.marssky.account.dao.AccountDao;
+import cn.marssky.account.dao.AdminUsersDao;
 import cn.marssky.account.dto.AccountDto;
+import cn.marssky.account.dto.ResponseDto;
+import cn.marssky.account.dto.SVCAdminUsersDto;
 import cn.marssky.account.model.Account;
+import cn.marssky.account.util.SmsUtil;
 import cn.marssky.common.error.ServiceException;
-import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import java.time.Instant;
+import java.util.Map;
 
-@Slf4j
 @Service
 public class AccountService {
 
+//    @Autowired
+//    AccountDao accountDao;
+
     @Autowired
-    AccountDao accountDao;
+    AdminUsersDao adminUsersDao;
+
+    @Autowired
+    SmsUtil smsUtil;
 
     private final ModelMapper modelMapper=null;
 
-    public int createAccount(String name, String email, String phoneNumber) {
+//    public int createAccount(String name, String email, String phoneNumber) {
+//        return accountDao.createAccount();
+//    }
+
+    //注册
+    public ResponseDto signup(SVCAdminUsersDto adminUsersDto){
+        if (!adminUsersDto.getCaptcha().equals(smsUtil.querySendDetails(adminUsersDto.getPhone(),adminUsersDto.getBizId()))){
+            return new ResponseDto("500","验证码错误",null,false);
+        }
+        adminUsersDto.setUpdatedAt();
+        adminUsersDto.setCreatedAt();
+        int res=adminUsersDao.signup(adminUsersDto);
+        if (res>0){
+            return new ResponseDto("200","注册成功",null,true);
+        }
+        return new ResponseDto("500","系统繁忙，请稍后再试",null,false);
+    }
+
+    //效验验证码
+    public ResponseDto examineCaptcha(SVCAdminUsersDto adminUsersDto){
+        if(adminUsersDto.getCaptcha().
+                equals(smsUtil.querySendDetails(adminUsersDto.getPhone(), adminUsersDto.getBizId()))){
+            return new ResponseDto("200","验证码正确",null,true);
+        }
+        return new ResponseDto("500","验证码错误",null,false);
+    }
 
 
+    //登录
+    public ResponseDto login(SVCAdminUsersDto adminUsersDto){
+        String result=adminUsersDao.login(adminUsersDto);
+        if (result!=null){
+            return new ResponseDto("200","登录成功",result,true);
+        }
+        return new ResponseDto("500","用户名或密码错误",null,false);
+    }
 
-        return accountDao.createAccount();
+    //发送短信
+    public ResponseDto sendSms(Map<String,String> map){
+        String result=smsUtil.sendSms(map.get("state"),map.get("phone"));
+        return new ResponseDto("200","发送成功",result,true);
+    }
+
+    //忘记密码
+    public ResponseDto forgetPassword(SVCAdminUsersDto adminUsersDto){
+        adminUsersDto.setUpdatedAt();
+        if(adminUsersDao.forgetPassword(adminUsersDto)>0){
+            return new ResponseDto("200","修改密码成功",null,true);
+        }
+        return new ResponseDto("500","系统繁忙，请稍后再试",null,false);
     }
 
     public AccountDto getOrCreate(String name, String email, String phoneNumber) {
-
         // 检查用户是否已注册过, 需要调用DAO判断
         Account existingAccount = null;
         if (StringUtils.hasText(email)) {

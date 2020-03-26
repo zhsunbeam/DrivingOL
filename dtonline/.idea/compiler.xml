@@ -6,10 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="dtbweb" />
+        <module name="common-lib" />
         <module name="account-api" />
         <module name="account-svc" />
-        <module name="common-lib" />
-        <module name="dtbweb" />
         <module name="dtfweb" />
       </profile>
     </annotationProcessing>
