@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.marssky.video.dao.TwoQuestionBanksDao">
+
+    <!--查询所有-->
+    <select id="queryAll" resultType="cn.marssky.video.model.TwoQuestionBanks">
+        select
+          id, title, subtitle, avatar, difficulty, avatar_type, sort, is_hide, created_at, updated_at, video, video_time, driver_school_id
+        from escort_pro.two_question_banks
+    </select>
+</mapper>

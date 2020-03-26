@@ -7,21 +7,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="dtbweb" />
-        <module name="common-lib" />
-        <module name="account-api" />
-        <module name="account-svc" />
         <module name="dtfweb" />
+        <module name="account-svc" />
+        <module name="common-lib" />
+        <module name="videoTwo-svc" />
+        <module name="videoTwo-api" />
+        <module name="account-api" />
+        <module name="dtbweb" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="account-api" target="1.8" />
-      <module name="account-svc" target="1.8" />
-      <module name="common-lib" target="1.8" />
-      <module name="dtbweb" target="1.8" />
-      <module name="dtfweb" target="1.8" />
-      <module name="dtonline" target="1.8" />
-      <module name="videoTwo-api" target="1.8" />
       <module name="videotwo-svc" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -33,6 +28,8 @@
       <module name="dtbweb" options="-parameters" />
       <module name="dtfweb" options="-parameters" />
       <module name="dtonline" options="-parameters" />
+      <module name="videoTwo-api" options="-parameters" />
+      <module name="videoTwo-svc" options="-parameters" />
     </option>
   </component>
 </project>

@@ -42,6 +42,11 @@
             <artifactId>account-api</artifactId>
             <version>1.0</version>
         </dependency>
+        <dependency>
+            <groupId>cn.marssky</groupId>
+            <artifactId>videoTwo-api</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
 
     <build>
