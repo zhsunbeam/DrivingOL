@@ -23,6 +23,8 @@ public class AccountController {
     AccountService accountService;
 
    //传JSON对象需要@RequestBody
+
+
     @RequestMapping("/create")
     public GenericAccountResponse createAccount( CreateAccountRequest accountDto) {
 

@@ -24,7 +24,7 @@ public class SwaggerConfig {
                 .apiInfo(apiEndPointsInfo())
                 .useDefaultResponseMessages(false);
     }
-
+//作者信息
     private ApiInfo apiEndPointsInfo() {
         return new ApiInfoBuilder().title("驾考在线账户服务API")
                 .description("账户服务API")
