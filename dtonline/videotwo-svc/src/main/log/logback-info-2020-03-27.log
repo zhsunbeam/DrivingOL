@@ -1,0 +1,24 @@
+2020-03-27 17:10:07.723 logback [main] INFO  cn.marssky.video.VideoApplication - The following profiles are active: dev
+2020-03-27 17:10:09.932 logback [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=965b1b50-2a86-38a3-ac88-2b657524b611
+2020-03-27 17:10:10.162 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-27 17:10:10.347 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$28c54b0a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-27 17:10:10.803 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9000 (http)
+2020-03-27 17:10:10.819 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9000"]
+2020-03-27 17:10:10.820 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-03-27 17:10:10.821 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-03-27 17:10:10.824 logback [main] INFO  o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2020-03-27 17:10:10.824 logback [main] INFO  o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-03-27 17:10:10.825 logback [main] INFO  o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-03-27 17:10:10.831 logback [main] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2020-03-27 17:10:11.287 logback [main] INFO  o.a.c.c.C.[.[localhost].[/video-svc] - Initializing Spring embedded WebApplicationContext
+2020-03-27 17:10:11.288 logback [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3534 ms
+2020-03-27 17:10:12.628 logback [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-03-27 17:10:12.666 logback [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-03-27 17:10:12.672 logback [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-03-27 17:10:12.942 logback [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-27 17:10:14.230 logback [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-03-27 17:10:14.260 logback [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-03-27 17:10:14.313 logback [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-03-27 17:10:14.533 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9000"]
+2020-03-27 17:10:14.578 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9000 (http) with context path '/video-svc'
+2020-03-27 17:10:14.582 logback [main] INFO  cn.marssky.video.VideoApplication - Started VideoApplication in 11.334 seconds (JVM running for 14.329)

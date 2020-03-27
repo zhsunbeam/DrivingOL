@@ -14,6 +14,8 @@
         <module>account-svc</module>
         <module>dtfweb</module>
         <module>dtbweb</module>
+        <module>videoTwo-svc</module>
+        <module>videoTwo-api</module>
     </modules>
     <name>Driving-Test-Project</name>
     <description>Driving Test Online</description>
