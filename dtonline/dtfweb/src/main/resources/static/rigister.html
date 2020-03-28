@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<script src="js/jquery-3.4.1.js"></script>
+<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+
+<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css">
+<!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+<script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/css/rigister.css">
+
+<body>
+	<!--max-->
+	<div id="rigister-max">
+
+		<div id="rigister-max-top">
+			<img src="img/LOGO.png" id="max-top-1" />
+		</div>
+
+		<div id="rigister-max-center">
+
+			<form class="divForm">
+				<div> <img src="img/LOGO.png" /> </div>
+				<br><br><br>
+				<div class="input-group">
+					<span class="input-group-addon" style=" position: relative;left: 120px;"><i
+							class="glyphicon glyphicon-user"> </i></span>
+					<input type="text" placeholder="昵称" title="请输入您的昵称" name="username" id="username"
+						class="form-control" style="width:200px;margin-left: 120px;" />
+					
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon" style=" position: relative;left: 120px;"><i
+							class="glyphicon glyphicon-earphone">
+						</i></span>
+					<input type="text" placeholder="输入11位手机号码" title="请输入您的手机号码" name="phone" id="phone"
+						class="form-control" style="width:200px;margin-left: 120px;" />
+						
+					</div>
+				<div class="input-group">
+					<span class="input-group-addon" style=" position: relative;left: 120px;"><i
+							class="glyphicon glyphicon-lock">
+						</i></span>
+					<input type="text" placeholder="输入验证码" title="请输入您收到的验证码" name="code" id="code" class="form-control"
+						style="width:115px;margin-left: 120px;" />
+						
+					<button class="btn btn-primary btn-block loginbtn" id="login2" onclick="check()">发送验证码</button>
+				
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon" style=" position: relative;left: 120px;"><i
+							class=" glyphicon glyphicon-phone-alt">
+						</i></span>
+					<input type="password" placeholder="设置登录密码(至少6位)" title="请输入您的密码" name="password" id="password"
+						class="form-control" style="width:200px;margin-left: 120px;" />
+			
+				</div>
+
+				<button class="btn btn-primary btn-block loginbtn" id="login" onclick="next()">注册</button>
+				<div style="margin-left: -130px;"> 已有账号？<a href="login.html">立即登录</a></div>
+
+			</form>
+
+		</div>
+
+		<div id="rigister-top">
+			<center>
+				<span>公司地址：北京东城</span>
+				<samp>&nbsp;&nbsp;</samp>
+				<span>邮箱：1399758427@qq.com</span>
+				<p>Copyright@2020 XXX 京ICP999999号-1</p>
+			</center>
+		</div>
+	</div>
+</body>
+<script>
+	function rigisterCheck() {
+		var name = $("#username").val();
+		var phone = $("#phone").val();
+		var code = $("#code").val();
+		var password = $("#password").val();
+
+		var nameCheck=/^[\u4e00-\u9fa5]{2,6}$/;
+		var phoneCheck=/^[1][3,4,5,7,8][0-9]{9}$/;
+		var codeCheck=/^\d{6}$/;
+		var passwordCheck=/^(\w){6,20}$/;
+		if(name==""){
+		 alert("姓名不能为空")
+		 return false;
+		}
+		if(!nameCheck.test(name)){
+			 alert("请填写真实姓名2-6个中文")
+				 return false;
+		}
+		if(phone==""){
+			alert("电话号码不能为空")
+			 return false;
+		}
+		if(!phoneCheck.test(phone)){
+			alert("手机号码有误")
+			 return false;
+		}
+		if(code==""){
+			alert("验证码不能空")
+			 return false;
+		}
+		if(!codeCheck.test(code)){
+			alert("验证码输入错误")
+			 return false;
+		}
+		if(password==""){
+			alert("密码不能为空")
+			 return false;
+		}
+		if (!passwordCheck.test(password)) {
+			alert("密码6-20个数字，字母，符号")
+		}
+
+	}
+
+	function next() {
+	 rigisterCheck() 
+	window.open("login.html")
+
+		
+	}
+</script>
+
+</html>
