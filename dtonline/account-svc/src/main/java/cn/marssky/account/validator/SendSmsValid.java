@@ -4,12 +4,13 @@ import javax.validation.Constraint;
 import javax.validation.Payload;
 import java.lang.annotation.*;
 
-import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
-@Target({ElementType.METHOD,ElementType.PARAMETER})
+@Target(ElementType.PARAMETER)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Constraint(validatedBy = SendSmsValidated.class)
+// 定义一个Map参数验证的注解判断发送短信的信息是否合理，
+// 作用于方法的参数，保留在服务器运行时，实现类为SendSmsValidated
 public @interface SendSmsValid {
     String message() default "";
 

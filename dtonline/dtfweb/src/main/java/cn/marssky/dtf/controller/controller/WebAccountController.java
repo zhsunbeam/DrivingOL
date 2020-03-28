@@ -1,11 +1,11 @@
 package cn.marssky.dtf.controller.controller;
 
-import cn.marssky.account.dto.AdminUsersDto;
-import cn.marssky.account.dto.ResponseDto;
+import cn.marssky.common.dto.AdminUsersDto;
+import cn.marssky.common.dto.ResponseDto;
+import cn.marssky.dtf.controller.utils.PublicUtil;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
-import org.springframework.http.HttpEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -32,11 +32,9 @@ public class WebAccountController {
     @ApiOperation("注册，需要传入phone、name、captcha、bizId、encryptedPassword")
     public ResponseDto signup(@Validated({AdminUsersDto.Signup.class, Default.class})
                                      AdminUsersDto adminUsersDto){
-        RestTemplate restTemplate=restTemplateBuilder.build();
         String url="http://localhost:9000/account-svc/v1/account/signup";
-        HttpEntity<AdminUsersDto> httpEntity=new HttpEntity<>(adminUsersDto);
-        ResponseDto result=restTemplate.postForObject(url,httpEntity,ResponseDto.class);
-        return result;
+        //调用公有类的publicUtil方法发送请求
+        return PublicUtil.publicUtil(restTemplateBuilder,url,adminUsersDto);
     }
 
     //发送短信
@@ -58,10 +56,9 @@ public class WebAccountController {
     @ApiOperation("登录，需要传入phone、encryptedPassword")
     public ResponseDto login(@Validated({AdminUsersDto.Login.class,Default.class})
                                          AdminUsersDto adminUsersDto){
-        RestTemplate restTemplate=restTemplateBuilder.build();
         String url="http://localhost:9000/account-svc/v1/account/login";
-        HttpEntity<AdminUsersDto> httpEntity=new HttpEntity<>(adminUsersDto);
-        return restTemplate.postForObject(url,httpEntity,ResponseDto.class);
+        //调用公有类的publicUtil方法发送请求
+        return PublicUtil.publicUtil(restTemplateBuilder,url,adminUsersDto);
     }
 
     //效验验证码
@@ -69,21 +66,17 @@ public class WebAccountController {
     @ApiOperation("效验验证码，需要传入phone、captcha、bizId")
     public ResponseDto examineCaptcha(@Validated({AdminUsersDto.ExamineCaptcha.class,Default.class})
                                                   AdminUsersDto adminUsersDto){
-        RestTemplate restTemplate=restTemplateBuilder.build();
         String url="http://localhost:9000/account-svc/v1/account/examine_captcha";
-        HttpEntity<AdminUsersDto> httpEntity=new HttpEntity<>(adminUsersDto);
-        ResponseDto result=restTemplate.postForObject(url,httpEntity,ResponseDto.class);
-        return result;
+        //调用公有类的publicUtil方法发送请求
+        return PublicUtil.publicUtil(restTemplateBuilder,url,adminUsersDto);
     }
 
     //忘记密码
     @PostMapping("/forget_password")
     @ApiOperation("忘记密码，需要传入phone、encryptedPassword")
     public ResponseDto forgetPassword(@Validated({AdminUsersDto.ForgetPassword.class,Default.class}) AdminUsersDto adminUsersDto){
-        RestTemplate restTemplate=restTemplateBuilder.build();
         String url="http://localhost:9000/account-svc/v1/account/forget_password";
-        HttpEntity<AdminUsersDto> httpEntity=new HttpEntity<>(adminUsersDto);
-        ResponseDto result=restTemplate.postForObject(url,httpEntity,ResponseDto.class);
-        return result;
+        //调用公有类的publicUtil方法发送请求
+        return PublicUtil.publicUtil(restTemplateBuilder,url,adminUsersDto);
     }
 }

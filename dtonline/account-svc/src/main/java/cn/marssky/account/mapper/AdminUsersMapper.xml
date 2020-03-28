@@ -14,18 +14,18 @@
     </select>
 
     <!--  登录  -->
-    <select id="login" parameterType="cn.marssky.account.dto.SVCAdminUsersDto" resultType="String">
+    <select id="login" parameterType="cn.marssky.common.dto.AdminUsersDto" resultType="String">
         SELECT id FROM admin_users WHERE phone=#{phone} AND encrypted_password=#{encryptedPassword}
     </select>
 
     <!--  注册  -->
-    <insert id="signup" parameterType="cn.marssky.account.dto.SVCAdminUsersDto">
+    <insert id="signup" parameterType="cn.marssky.common.dto.AdminUsersDto">
         INSERT INTO admin_users(phone,name,encrypted_password,created_at,updated_at)
         VALUES(#{phone},#{name},#{encryptedPassword},#{createdAt},#{updatedAt})
     </insert>
 
     <!--  修改密码  -->
-    <update id="forgetPassword" parameterType="cn.marssky.account.dto.SVCAdminUsersDto">
+    <update id="forgetPassword" parameterType="cn.marssky.common.dto.AdminUsersDto">
         UPDATE admin_users SET encrypted_password=#{encryptedPassword},updated_at=#{updatedAt} WHERE phone=#{phone}
     </update>
 </mapper>

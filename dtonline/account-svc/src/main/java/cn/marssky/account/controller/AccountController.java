@@ -1,14 +1,14 @@
 package cn.marssky.account.controller;
 
-import cn.marssky.account.dto.*;
 import cn.marssky.account.service.AccountService;
+import cn.marssky.account.validator.NameValid;
 import cn.marssky.account.validator.SendSmsValid;
+import cn.marssky.common.dto.AdminUsersDto;
+import cn.marssky.common.dto.ResponseDto;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.env.Environment;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.security.NoSuchAlgorithmException;
 import java.util.Map;
 
@@ -17,65 +17,32 @@ import java.util.Map;
 @RequestMapping("/v1/account")
 @Validated
 public class AccountController {
-    @Autowired
-    Environment env;
 
     @Autowired
     AccountService accountService;
 
-   //传JSON对象需要@RequestBody
-    @RequestMapping("/create")
-    public GenericAccountResponse createAccount( CreateAccountRequest accountDto) {
-//        log.info("调用账户服务模块的createAccount方法来注册");
-        //调用服务层
-        //log.info(accountDto.getEmail());
-        //测试
-        AccountDto adto = new AccountDto();
-        adto.setName("jack");
-        adto.setEmail("5687@qq.com");
-        GenericAccountResponse genericAccountResponse = new GenericAccountResponse(adto);
-        return genericAccountResponse;
-    }
 
     //注册
     @PostMapping("/signup")
-    public ResponseDto signup(@RequestBody @Valid SVCAdminUsersDto adminUsersDto){
-        try {
-            adminUsersDto.setEncryptedPassword();
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-            return new ResponseDto("500","系统繁忙，请稍后再试",null,false);
-        }
+    public ResponseDto signup(@RequestBody @NameValid AdminUsersDto adminUsersDto) throws NoSuchAlgorithmException {
         return accountService.signup(adminUsersDto);
     }
 
     //登录
     @PostMapping("/login")
-    public ResponseDto login(@RequestBody SVCAdminUsersDto adminUsersDto){
-        try {
-            adminUsersDto.setEncryptedPassword();
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-            return new ResponseDto("500","系统繁忙，请稍后再试",null,false);
-        }
+    public ResponseDto login(@RequestBody AdminUsersDto adminUsersDto) throws NoSuchAlgorithmException {
         return accountService.login(adminUsersDto);
     }
 
     //效验验证码
     @PostMapping("/examine_captcha")
-    public ResponseDto examineCaptcha(@RequestBody SVCAdminUsersDto adminUsersDto){
+    public ResponseDto examineCaptcha(@RequestBody AdminUsersDto adminUsersDto){
         return accountService.examineCaptcha(adminUsersDto);
     }
 
     //忘记密码
     @PostMapping("/forget_password")
-    public ResponseDto forgetPassword(@RequestBody SVCAdminUsersDto adminUsersDto){
-        try {
-            adminUsersDto.setEncryptedPassword();
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-            return new ResponseDto("500","系统繁忙，请稍后再试",null,false);
-        }
+    public ResponseDto forgetPassword(@RequestBody AdminUsersDto adminUsersDto) throws NoSuchAlgorithmException {
         return accountService.forgetPassword(adminUsersDto);
     }
 
