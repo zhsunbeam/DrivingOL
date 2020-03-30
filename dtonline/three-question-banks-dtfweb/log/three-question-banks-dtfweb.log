@@ -1,0 +1,21 @@
+2020-03-31 01:24:18.762  INFO 16760 --- [main] cn.marssky.dtfweb.ThreeDtfweb            : No active profile set, falling back to default profiles: default
+2020-03-31 01:24:19.526  INFO 16760 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1794adb3-a8e9-32aa-878a-719320c9f130
+2020-03-31 01:24:19.638  INFO 16760 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-31 01:24:19.658  INFO 16760 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$266b225b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-31 01:24:19.884  INFO 16760 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2020-03-31 01:24:19.892  INFO 16760 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-31 01:24:19.893  INFO 16760 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-03-31 01:24:19.998  INFO 16760 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-31 01:24:19.998  INFO 16760 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1217 ms
+2020-03-31 01:24:20.605  WARN 16760 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-03-31 01:24:20.605  INFO 16760 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-03-31 01:24:20.609  WARN 16760 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-03-31 01:24:20.609  INFO 16760 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-03-31 01:24:20.743  INFO 16760 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-31 01:24:21.661  INFO 16760 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-03-31 01:24:21.762  INFO 16760 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2020-03-31 01:24:21.765  INFO 16760 --- [main] cn.marssky.dtfweb.ThreeDtfweb            : Started ThreeDtfweb in 5.783 seconds (JVM running for 7.201)
+2020-03-31 01:24:22.135  INFO 16760 --- [RMI TCP Connection(1)-192.168.0.104] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-31 01:24:22.135  INFO 16760 --- [RMI TCP Connection(1)-192.168.0.104] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-31 01:24:22.149  INFO 16760 --- [RMI TCP Connection(1)-192.168.0.104] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2020-03-31 01:24:22.181  INFO 16760 --- [RMI TCP Connection(2)-192.168.0.104] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
