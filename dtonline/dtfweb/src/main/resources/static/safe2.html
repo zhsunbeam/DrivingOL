@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<script src="js/jquery-3.4.1.js"></script>
+<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+
+<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css">
+<!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+<script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/css/safe2.css">
+<script src="js/safe2.js"></script>
+<body>
+    <!--max-->
+    <div id="rigister-max">
+
+        <div id="rigister-max-top">
+            <img src="img/LOGO.png" id="max-top-1" />
+        </div>
+
+        <div id="rigister-max-center">
+           <img src="img/rest2.png">
+            <div style=" position: relative;left: 280px;top: 120px;">
+                
+                <label style="color:gray;font-size: 10px;">验证码已经发送到手机</label><br>
+                <label>188****8888</label>
+            </div>
+           <div class="input-group">
+               <span class="input-group-addon" style=" position: relative;left: 280px;top: 120px;"><i
+                       class="glyphicon glyphicon-user"> </i></span>
+               <input type="text" placeholder="" name="phone" id="phone" class="form-control"
+                   style="width:200px;margin-left: 280px;top: 120px;" />
+                    <!-- <button class="btn btn-primary btn-block loginbtn" type="button" id="login2" value="重新发送"
+                       onclick="settime(this)">重新发送</button> -->
+                       <input type="button" id="login2" value="发送验证码" onclick="settime(this)" />
+
+           </div>
+           <button class="btn btn-primary btn-block loginbtn" id="login" onclick="safe2()">下一步</button>
+          <div>
+              <label
+                  style="position: relative;left: 460px;top: 160px;"><a
+                      style="color:gray;font-size: 11px;">收不到验证码？</a></label>
+          </div>
+
+           </div>
+
+        </div>
+
+        <div id="rigister-top">
+            <center>
+                <span>公司地址：北京东城</span>
+                <samp>&nbsp;&nbsp;</samp>
+                <span>邮箱：1399758427@qq.com</span>
+                <p>Copyright@2020 XXX 京ICP999999号-1</p>
+            </center>
+        </div>
+    </div>
+</body>
+<script>
+    function phoneCheck(){
+        var phone=$("#phone").val();
+        var phoneCheck=/^[1][3,4,5,7,8][0-9]{9}$/;
+        if(phone==""){
+            alert("请输入手机号")
+        return false;
+        }
+        if(!phoneCheck.test(phone)){
+            alert("手机号不存在")
+            return false;
+        }
+    }
+    function safe2(){
+     phoneCheck()
+    window.location.href="forgotpassword2.html";
+   
+   
+    }
+</script>
+</html>

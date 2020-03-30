@@ -1,96 +1,24 @@
-INFO 2020-03-20 10:25:33 c.m.account.AccountApplication.logStartupProfileInfo 651 :No active profile set, falling back to default profiles: default
-INFO 2020-03-20 10:25:35 o.s.c.c.scope.GenericScope.setSerializationId 294 :BeanFactory id=e50bb66f-ec68-3922-a444-0d85f6a16b9a
-INFO 2020-03-20 10:25:35 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization 330 :Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-INFO 2020-03-20 10:25:35 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization 330 :Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$28c54b0a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-INFO 2020-03-20 10:25:36 o.s.b.w.e.t.TomcatWebServer.initialize 92 :Tomcat initialized with port(s): 9000 (http)
-INFO 2020-03-20 10:25:36 o.a.c.core.StandardService.log 173 :Starting service [Tomcat]
-INFO 2020-03-20 10:25:36 o.a.c.core.StandardEngine.log 173 :Starting Servlet engine: [Apache Tomcat/9.0.29]
-INFO 2020-03-20 10:25:36 o.a.c.c.C.[.[.[/account-svc].log 173 :Initializing Spring embedded WebApplicationContext
-INFO 2020-03-20 10:25:36 o.s.web.context.ContextLoader.prepareWebApplicationContext 284 :Root WebApplicationContext: initialization completed in 2375 ms
-INFO 2020-03-20 10:25:36 s.d.s.w.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods 69 :Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-WARN 2020-03-20 10:25:36 o.s.c.n.a.ArchaiusAutoConfiguration.configureArchaius 151 :No spring.application.name found, defaulting to 'application'
-WARN 2020-03-20 10:25:36 c.n.c.s.URLConfigurationSource.<init> 120 :No URLs will be polled as dynamic configuration sources.
-INFO 2020-03-20 10:25:36 c.n.c.s.URLConfigurationSource.<init> 121 :To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-WARN 2020-03-20 10:25:36 c.n.c.s.URLConfigurationSource.<init> 120 :No URLs will be polled as dynamic configuration sources.
-INFO 2020-03-20 10:25:36 c.n.c.s.URLConfigurationSource.<init> 121 :To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-INFO 2020-03-20 10:25:37 o.s.s.c.ThreadPoolTaskExecutor.initialize 171 :Initializing ExecutorService 'applicationTaskExecutor'
-INFO 2020-03-20 10:25:40 o.s.c.commons.util.InetUtils.convertAddress 170 :Cannot determine local hostname
-INFO 2020-03-20 10:25:40 s.d.s.w.p.DocumentationPluginsBootstrapper.start 160 :Context refreshed
-INFO 2020-03-20 10:25:40 s.d.s.w.p.DocumentationPluginsBootstrapper.start 163 :Found 1 custom documentation plugin(s)
-INFO 2020-03-20 10:25:40 s.d.s.w.s.ApiListingReferenceScanner.scan 41 :Scanning for api listing references
-INFO 2020-03-20 10:25:41 o.s.b.w.e.t.TomcatWebServer.start 204 :Tomcat started on port(s): 9000 (http) with context path '/account-svc'
-INFO 2020-03-20 10:25:41 c.m.account.AccountApplication.logStarted 61 :Started AccountApplication in 15.01 seconds (JVM running for 17.859)
-INFO 2020-03-20 10:27:40 c.m.account.AccountApplication.logStartupProfileInfo 651 :No active profile set, falling back to default profiles: default
-INFO 2020-03-20 10:27:41 o.s.c.c.scope.GenericScope.setSerializationId 294 :BeanFactory id=e50bb66f-ec68-3922-a444-0d85f6a16b9a
-INFO 2020-03-20 10:27:41 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization 330 :Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-INFO 2020-03-20 10:27:41 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization 330 :Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$14584a0c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-INFO 2020-03-20 10:27:42 o.s.b.w.e.t.TomcatWebServer.initialize 92 :Tomcat initialized with port(s): 9000 (http)
-INFO 2020-03-20 10:27:42 o.a.c.core.StandardService.log 173 :Starting service [Tomcat]
-INFO 2020-03-20 10:27:42 o.a.c.core.StandardEngine.log 173 :Starting Servlet engine: [Apache Tomcat/9.0.29]
-INFO 2020-03-20 10:27:42 o.a.c.c.C.[.[.[/account-svc].log 173 :Initializing Spring embedded WebApplicationContext
-INFO 2020-03-20 10:27:42 o.s.web.context.ContextLoader.prepareWebApplicationContext 284 :Root WebApplicationContext: initialization completed in 1594 ms
-INFO 2020-03-20 10:27:42 s.d.s.w.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods 69 :Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-WARN 2020-03-20 10:27:42 o.s.c.n.a.ArchaiusAutoConfiguration.configureArchaius 151 :No spring.application.name found, defaulting to 'application'
-WARN 2020-03-20 10:27:42 c.n.c.s.URLConfigurationSource.<init> 120 :No URLs will be polled as dynamic configuration sources.
-INFO 2020-03-20 10:27:42 c.n.c.s.URLConfigurationSource.<init> 121 :To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-WARN 2020-03-20 10:27:42 c.n.c.s.URLConfigurationSource.<init> 120 :No URLs will be polled as dynamic configuration sources.
-INFO 2020-03-20 10:27:42 c.n.c.s.URLConfigurationSource.<init> 121 :To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-INFO 2020-03-20 10:27:42 o.s.s.c.ThreadPoolTaskExecutor.initialize 171 :Initializing ExecutorService 'applicationTaskExecutor'
-INFO 2020-03-20 10:27:46 o.s.c.commons.util.InetUtils.convertAddress 170 :Cannot determine local hostname
-INFO 2020-03-20 10:27:46 s.d.s.w.p.DocumentationPluginsBootstrapper.start 160 :Context refreshed
-INFO 2020-03-20 10:27:46 s.d.s.w.p.DocumentationPluginsBootstrapper.start 163 :Found 1 custom documentation plugin(s)
-INFO 2020-03-20 10:27:46 s.d.s.w.s.ApiListingReferenceScanner.scan 41 :Scanning for api listing references
-INFO 2020-03-20 10:27:46 o.s.b.w.e.t.TomcatWebServer.start 204 :Tomcat started on port(s): 9000 (http) with context path '/account-svc'
-INFO 2020-03-20 10:27:46 c.m.account.AccountApplication.logStarted 61 :Started AccountApplication in 13.949 seconds (JVM running for 16.446)
-INFO 2020-03-20 10:28:33 c.m.account.AccountApplication.logStartupProfileInfo 651 :No active profile set, falling back to default profiles: default
-INFO 2020-03-20 10:28:34 o.s.c.c.scope.GenericScope.setSerializationId 294 :BeanFactory id=e50bb66f-ec68-3922-a444-0d85f6a16b9a
-INFO 2020-03-20 10:28:34 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization 330 :Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-INFO 2020-03-20 10:28:34 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization 330 :Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f110fcfe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-INFO 2020-03-20 10:28:34 o.s.b.w.e.t.TomcatWebServer.initialize 92 :Tomcat initialized with port(s): 9000 (http)
-INFO 2020-03-20 10:28:34 o.a.c.core.StandardService.log 173 :Starting service [Tomcat]
-INFO 2020-03-20 10:28:34 o.a.c.core.StandardEngine.log 173 :Starting Servlet engine: [Apache Tomcat/9.0.29]
-INFO 2020-03-20 10:28:34 o.a.c.c.C.[.[.[/account-svc].log 173 :Initializing Spring embedded WebApplicationContext
-INFO 2020-03-20 10:28:34 o.s.web.context.ContextLoader.prepareWebApplicationContext 284 :Root WebApplicationContext: initialization completed in 1670 ms
-INFO 2020-03-20 10:28:35 s.d.s.w.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods 69 :Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-WARN 2020-03-20 10:28:35 o.s.c.n.a.ArchaiusAutoConfiguration.configureArchaius 151 :No spring.application.name found, defaulting to 'application'
-WARN 2020-03-20 10:28:35 c.n.c.s.URLConfigurationSource.<init> 120 :No URLs will be polled as dynamic configuration sources.
-INFO 2020-03-20 10:28:35 c.n.c.s.URLConfigurationSource.<init> 121 :To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-WARN 2020-03-20 10:28:35 c.n.c.s.URLConfigurationSource.<init> 120 :No URLs will be polled as dynamic configuration sources.
-INFO 2020-03-20 10:28:35 c.n.c.s.URLConfigurationSource.<init> 121 :To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-INFO 2020-03-20 10:28:35 o.s.s.c.ThreadPoolTaskExecutor.initialize 171 :Initializing ExecutorService 'applicationTaskExecutor'
-INFO 2020-03-20 10:28:39 o.s.c.commons.util.InetUtils.convertAddress 170 :Cannot determine local hostname
-INFO 2020-03-20 10:28:39 s.d.s.w.p.DocumentationPluginsBootstrapper.start 160 :Context refreshed
-INFO 2020-03-20 10:28:39 s.d.s.w.p.DocumentationPluginsBootstrapper.start 163 :Found 1 custom documentation plugin(s)
-INFO 2020-03-20 10:28:39 s.d.s.w.s.ApiListingReferenceScanner.scan 41 :Scanning for api listing references
-INFO 2020-03-20 10:28:39 o.s.b.w.e.t.TomcatWebServer.start 204 :Tomcat started on port(s): 9000 (http) with context path '/account-svc'
-INFO 2020-03-20 10:28:39 c.m.account.AccountApplication.logStarted 61 :Started AccountApplication in 13.741 seconds (JVM running for 16.494)
-INFO 2020-03-20 10:29:59 o.a.c.c.C.[.[.[/account-svc].log 173 :Initializing Spring DispatcherServlet 'dispatcherServlet'
-INFO 2020-03-20 10:29:59 o.s.w.s.DispatcherServlet.initServletBean 525 :Initializing Servlet 'dispatcherServlet'
-INFO 2020-03-20 10:29:59 o.s.w.s.DispatcherServlet.initServletBean 547 :Completed initialization in 23 ms
-WARN 2020-03-20 10:30:36 o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException 199 :Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public cn.marssky.account.dto.GenericAccountResponse cn.marssky.account.controller.AccountController.createAccount(cn.marssky.account.dto.CreateAccountRequest)]
-INFO 2020-03-20 10:32:32 c.m.account.AccountApplication.logStartupProfileInfo 651 :No active profile set, falling back to default profiles: default
-INFO 2020-03-20 10:32:33 o.s.c.c.scope.GenericScope.setSerializationId 294 :BeanFactory id=e50bb66f-ec68-3922-a444-0d85f6a16b9a
-INFO 2020-03-20 10:32:33 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization 330 :Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-INFO 2020-03-20 10:32:33 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization 330 :Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$9344e9ec] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-INFO 2020-03-20 10:32:34 o.s.b.w.e.t.TomcatWebServer.initialize 92 :Tomcat initialized with port(s): 9000 (http)
-INFO 2020-03-20 10:32:34 o.a.c.core.StandardService.log 173 :Starting service [Tomcat]
-INFO 2020-03-20 10:32:34 o.a.c.core.StandardEngine.log 173 :Starting Servlet engine: [Apache Tomcat/9.0.29]
-INFO 2020-03-20 10:32:34 o.a.c.c.C.[.[.[/account-svc].log 173 :Initializing Spring embedded WebApplicationContext
-INFO 2020-03-20 10:32:34 o.s.web.context.ContextLoader.prepareWebApplicationContext 284 :Root WebApplicationContext: initialization completed in 1672 ms
-INFO 2020-03-20 10:32:34 s.d.s.w.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods 69 :Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-WARN 2020-03-20 10:32:34 o.s.c.n.a.ArchaiusAutoConfiguration.configureArchaius 151 :No spring.application.name found, defaulting to 'application'
-WARN 2020-03-20 10:32:34 c.n.c.s.URLConfigurationSource.<init> 120 :No URLs will be polled as dynamic configuration sources.
-INFO 2020-03-20 10:32:34 c.n.c.s.URLConfigurationSource.<init> 121 :To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-WARN 2020-03-20 10:32:34 c.n.c.s.URLConfigurationSource.<init> 120 :No URLs will be polled as dynamic configuration sources.
-INFO 2020-03-20 10:32:34 c.n.c.s.URLConfigurationSource.<init> 121 :To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-INFO 2020-03-20 10:32:35 o.s.s.c.ThreadPoolTaskExecutor.initialize 171 :Initializing ExecutorService 'applicationTaskExecutor'
-INFO 2020-03-20 10:32:38 o.s.c.commons.util.InetUtils.convertAddress 170 :Cannot determine local hostname
-INFO 2020-03-20 10:32:38 s.d.s.w.p.DocumentationPluginsBootstrapper.start 160 :Context refreshed
-INFO 2020-03-20 10:32:38 s.d.s.w.p.DocumentationPluginsBootstrapper.start 163 :Found 1 custom documentation plugin(s)
-INFO 2020-03-20 10:32:38 s.d.s.w.s.ApiListingReferenceScanner.scan 41 :Scanning for api listing references
-INFO 2020-03-20 10:32:39 o.s.b.w.e.t.TomcatWebServer.start 204 :Tomcat started on port(s): 9000 (http) with context path '/account-svc'
-INFO 2020-03-20 10:32:39 c.m.account.AccountApplication.logStarted 61 :Started AccountApplication in 14.458 seconds (JVM running for 17.057)
-INFO 2020-03-20 10:32:40 o.a.c.c.C.[.[.[/account-svc].log 173 :Initializing Spring DispatcherServlet 'dispatcherServlet'
-INFO 2020-03-20 10:32:40 o.s.w.s.DispatcherServlet.initServletBean 525 :Initializing Servlet 'dispatcherServlet'
-INFO 2020-03-20 10:32:40 o.s.w.s.DispatcherServlet.initServletBean 547 :Completed initialization in 14 ms
-INFO 2020-03-20 10:32:40 c.m.a.c.AccountController.createAccount 28 :调用账户服务模块的createAccount方法来注册
+INFO 2020-03-28 16:03:14 c.m.account.AccountApplication.logStartupProfileInfo 651 :No active profile set, falling back to default profiles: default
+INFO 2020-03-28 16:03:14 o.s.c.c.scope.GenericScope.setSerializationId 294 :BeanFactory id=68b8bcc2-a057-326e-95e2-62a881b3b7e5
+INFO 2020-03-28 16:03:14 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization 330 :Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+INFO 2020-03-28 16:03:14 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization 330 :Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$a87661e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+INFO 2020-03-28 16:03:14 o.s.b.w.e.t.TomcatWebServer.initialize 92 :Tomcat initialized with port(s): 9000 (http)
+INFO 2020-03-28 16:03:14 o.a.c.core.StandardService.log 173 :Starting service [Tomcat]
+INFO 2020-03-28 16:03:14 o.a.c.core.StandardEngine.log 173 :Starting Servlet engine: [Apache Tomcat/9.0.29]
+INFO 2020-03-28 16:03:14 o.a.c.c.C.[.[.[/account-svc].log 173 :Initializing Spring embedded WebApplicationContext
+INFO 2020-03-28 16:03:14 o.s.web.context.ContextLoader.prepareWebApplicationContext 284 :Root WebApplicationContext: initialization completed in 727 ms
+WARN 2020-03-28 16:03:15 o.s.c.n.a.ArchaiusAutoConfiguration.configureArchaius 151 :No spring.application.name found, defaulting to 'application'
+WARN 2020-03-28 16:03:15 c.n.c.s.URLConfigurationSource.<init> 120 :No URLs will be polled as dynamic configuration sources.
+INFO 2020-03-28 16:03:15 c.n.c.s.URLConfigurationSource.<init> 121 :To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+WARN 2020-03-28 16:03:15 c.n.c.s.URLConfigurationSource.<init> 120 :No URLs will be polled as dynamic configuration sources.
+INFO 2020-03-28 16:03:15 c.n.c.s.URLConfigurationSource.<init> 121 :To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+INFO 2020-03-28 16:03:15 o.s.s.c.ThreadPoolTaskExecutor.initialize 171 :Initializing ExecutorService 'applicationTaskExecutor'
+INFO 2020-03-28 16:03:15 o.s.b.w.e.t.TomcatWebServer.start 204 :Tomcat started on port(s): 9000 (http) with context path '/account-svc'
+INFO 2020-03-28 16:03:15 c.m.account.AccountApplication.logStarted 61 :Started AccountApplication in 2.289 seconds (JVM running for 2.712)
+INFO 2020-03-28 16:03:32 o.a.c.c.C.[.[.[/account-svc].log 173 :Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO 2020-03-28 16:03:32 o.s.w.s.DispatcherServlet.initServletBean 525 :Initializing Servlet 'dispatcherServlet'
+INFO 2020-03-28 16:03:32 o.s.w.s.DispatcherServlet.initServletBean 547 :Completed initialization in 5 ms
+INFO 2020-03-28 16:03:32 c.z.hikari.HikariDataSource.getConnection 110 :HikariPool-1 - Starting...
+INFO 2020-03-28 16:03:32 c.z.hikari.HikariDataSource.getConnection 123 :HikariPool-1 - Start completed.
+INFO 2020-03-28 16:03:32 p6spy.logSQL 60 :1585382612860|11|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/escort_pro?serverTimezone=UTC&characterEncoding=UTF-8|SELECT COUNT(*) FROM admin_users WHERE                       phone=?|SELECT COUNT(*) FROM admin_users WHERE                       phone='15111633630'
+INFO 2020-03-28 16:03:35 p6spy.logSQL 60 :1585382615928|0|statement|connection 0|url jdbc:p6spy:mysql://localhost:3306/escort_pro?serverTimezone=UTC&characterEncoding=UTF-8|SELECT COUNT(*) FROM admin_users WHERE                       phone=?|SELECT COUNT(*) FROM admin_users WHERE                       phone='15111633630'

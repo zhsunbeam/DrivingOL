@@ -1,7 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="41b29941-a985-4e2e-8315-48068dec7d82" name="Default Changelist" comment="" />
+    <list default="true" id="0536feb6-ace2-42e5-b5e8-03dcaac8625d" name="Default Changelist" comment="Merge branch 'master' of https://github.com/zhsunbeam/DrivingOL&#10;&#10;# Conflicts:&#10;#&#9;dtonline/.idea/compiler.xml&#10;#&#9;dtonline/.idea/encodings.xml&#10;#&#9;dtonline/.idea/misc.xml&#10;#&#9;dtonline/account-api/src/main/java/cn/marssky/account/client/AccountClient.java&#10;#&#9;dtonline/account-api/target/classes/cn/marssky/account/client/AccountClient.class&#10;#&#9;dtonline/account-svc/pom.xml&#10;#&#9;dtonline/account-svc/src/main/java/cn/marssky/account/controller/AccountController.java&#10;#&#9;dtonline/account-svc/src/main/java/cn/marssky/account/service/AccountService.java&#10;#&#9;dtonline/account-svc/src/main/resources/application.properties&#10;#&#9;dtonline/account-svc/target/classes/cn/marssky/account/controller/AccountController.class&#10;#&#9;dtonline/account-svc/target/classes/cn/marssky/account/service/AccountService.class&#10;#&#9;dtonline/account_service.log&#10;#&#9;dtonline/common-lib/pom.xml&#10;#&#9;dtonline/common-lib/target/classes/cn/marssky/common/async/ContextCopyingDecorator.class&#10;#&#9;dtonline/common-lib/target/common-lib-1.0.jar&#10;#&#9;dtonline/common-lib/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst&#10;#&#9;dtonline/dtfweb/pom.xml&#10;#&#9;dtonline/pom.xml">
+      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-api/target/classes/META-INF/account-api.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-svc/log/debug-log.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-svc/log/info-log.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-svc/src/main/java/cn/marssky/account/dao/AdminUsersDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-svc/src/main/java/cn/marssky/account/exception/AllExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-svc/src/main/java/cn/marssky/account/mapper/AdminUsersMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-svc/src/main/java/cn/marssky/account/util/SmsUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-svc/src/main/java/cn/marssky/account/validator/NameValid.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-svc/src/main/java/cn/marssky/account/validator/NameValidated.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-svc/src/main/java/cn/marssky/account/validator/SendSmsValid.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-svc/src/main/java/cn/marssky/account/validator/SendSmsValidated.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-svc/src/main/resources/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-svc/target/classes/META-INF/account-svc.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-svc/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-svc/target/classes/cn/marssky/account/dao/AdminUsersDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-svc/target/classes/cn/marssky/account/exception/AllExceptionHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-svc/target/classes/cn/marssky/account/mapper/AdminUsersMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-svc/target/classes/cn/marssky/account/util/SmsUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-svc/target/classes/cn/marssky/account/validator/NameValid.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-svc/target/classes/cn/marssky/account/validator/NameValidated.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-svc/target/classes/cn/marssky/account/validator/SendSmsValid.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-svc/target/classes/cn/marssky/account/validator/SendSmsValidated.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-svc/target/classes/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-svc/target/classes/spy.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account_service.log.2020-03-24.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account_service.log.2020-03-25.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account_service.log.2020-03-27.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/cn/marssky/common/Utils/ResponseUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/cn/marssky/common/dmo/AdminUsersModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/cn/marssky/common/dto/AdminUsersDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/cn/marssky/common/dto/ResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-lib/src/main/java/cn/marssky/common/exception/ParameterException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-lib/target/classes/cn/marssky/common/Utils/ResponseUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-lib/target/classes/cn/marssky/common/dmo/AdminUsersModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-lib/target/classes/cn/marssky/common/dto/AdminUsersDto$ExamineCaptcha.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-lib/target/classes/cn/marssky/common/dto/AdminUsersDto$ForgetPassword.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-lib/target/classes/cn/marssky/common/dto/AdminUsersDto$Login.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-lib/target/classes/cn/marssky/common/dto/AdminUsersDto$Signup.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-lib/target/classes/cn/marssky/common/dto/AdminUsersDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-lib/target/classes/cn/marssky/common/dto/ResponseDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-lib/target/classes/cn/marssky/common/exception/ParameterException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/java/cn/marssky/dtf/DtfWebApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/java/cn/marssky/dtf/config/MyMvcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/java/cn/marssky/dtf/controller/DtfWebApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/java/cn/marssky/dtf/controller/VideoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/java/cn/marssky/dtf/controller/config/DtfWebSwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/java/cn/marssky/dtf/controller/config/ValidatedConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/java/cn/marssky/dtf/controller/controller/WebAccountController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/java/cn/marssky/dtf/controller/exception/ConstraintViolationExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/java/cn/marssky/dtf/controller/utils/PublicUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/resources/static/css/forgotpassword.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/resources/static/css/forgotpassword2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/resources/static/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/resources/static/css/rigister.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/resources/static/css/safe.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/resources/static/css/safe2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/resources/static/forgotpassword.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/resources/static/forgotpassword2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/resources/static/img/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/resources/static/img/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/resources/static/img/LOGO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/resources/static/img/bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/resources/static/img/login.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/resources/static/img/rest1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/resources/static/img/rest2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/resources/static/img/rest3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/resources/static/js/forgotpassword.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/resources/static/js/forgotpassword2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/resources/static/js/jquery-3.4.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/resources/static/js/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/resources/static/js/safe2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/resources/static/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/resources/static/muban.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/resources/static/rigister.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/resources/static/safe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/src/main/resources/static/safe2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/target/classes/META-INF/dtfweb.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/target/classes/cn/marssky/dtf/controller/DtfWebApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/target/classes/cn/marssky/dtf/controller/config/DtfWebSwaggerConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/target/classes/cn/marssky/dtf/controller/config/ValidatedConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/target/classes/cn/marssky/dtf/controller/controller/WebAccountController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/target/classes/cn/marssky/dtf/controller/exception/ConstraintViolationExceptionHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dtfweb/target/classes/cn/marssky/dtf/controller/utils/PublicUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoTwo-api/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoTwo-api/src/main/java/cn/marssky/video/client/VideoTwoClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videoTwo-api/src/main/java/cn/marssky/video/dto/TwoQuestionBanksDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videotwo-svc/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videotwo-svc/src/main/java/cn/marssky/video/VideoApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videotwo-svc/src/main/java/cn/marssky/video/aspect/PerformanceAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videotwo-svc/src/main/java/cn/marssky/video/config/MyMvcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videotwo-svc/src/main/java/cn/marssky/video/config/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videotwo-svc/src/main/java/cn/marssky/video/controller/TwoQuestionBanksController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videotwo-svc/src/main/java/cn/marssky/video/dao/TwoQuestionBanksDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videotwo-svc/src/main/java/cn/marssky/video/mapper/TwoQuestionBanksMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videotwo-svc/src/main/java/cn/marssky/video/model/TwoQuestionBanks.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videotwo-svc/src/main/java/cn/marssky/video/service/TwoQuestionBanksService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videotwo-svc/src/main/java/cn/marssky/video/service/impl/TwoQuestionBanksServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videotwo-svc/src/main/log/logback-error-2020-03-27.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videotwo-svc/src/main/log/logback-info-2020-03-27.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videotwo-svc/src/main/log/logback-warn-2020-03-27.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videotwo-svc/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videotwo-svc/src/main/resources/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videotwo-svc/src/main/resources/spy.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videotwo-svc/src/main/resources/static/html/TwoSubjects.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videotwo-svc/src/main/resources/static/image/new.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/videotwo-svc/src/main/resources/static/js/TwoSubjects.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-api/src/main/java/cn/marssky/account/client/AccountClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/account-api/src/main/java/cn/marssky/account/client/AccountClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-api/target/classes/cn/marssky/account/client/AccountClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/account-api/target/classes/cn/marssky/account/client/AccountClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-api/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/account-api/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-svc/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/account-svc/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-svc/src/main/java/cn/marssky/account/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/account-svc/src/main/java/cn/marssky/account/controller/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-svc/src/main/java/cn/marssky/account/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/account-svc/src/main/java/cn/marssky/account/service/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-svc/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/account-svc/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-svc/target/classes/cn/marssky/account/controller/AccountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/account-svc/target/classes/cn/marssky/account/controller/AccountController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-svc/target/classes/cn/marssky/account/service/AccountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/account-svc/target/classes/cn/marssky/account/service/AccountService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-svc/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/account-svc/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-svc/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/account-svc/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account_service.log" beforeDir="false" afterPath="$PROJECT_DIR$/account_service.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-lib/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common-lib/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-lib/target/common-lib-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-lib/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-lib/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common-lib/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-lib/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common-lib/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dtbweb/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/account-svc/log/error-log.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dtbweb/target/classes/dtb-jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/videotwo-svc/src/main/log/logback-debug-2020-03-27.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dtfweb/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dtfweb/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dtfweb/target/classes/cn/marssky/dtf/controller/SignController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dtfweb/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/dtfweb/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/three-question-banks-dtfweb/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/three-question-banks-dtfweb/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/three-question-banks-dtfweb/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/three-question-banks-dtfweb/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/three-question-banks-dtfweb/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/three-question-banks-dtfweb/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/three-question-banks-dtfweb/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/three-question-banks-dtfweb/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/three_question_banks_dtfweb_service.log" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/account-api/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -10,6 +156,8 @@
     <ignored path="$PROJECT_DIR$/common-lib/target/" />
     <ignored path="$PROJECT_DIR$/dtfweb/target/" />
     <ignored path="$PROJECT_DIR$/three-question-banks-dtfweb/target/" />
+    <ignored path="$PROJECT_DIR$/videoTwo-api/target/" />
+    <ignored path="$PROJECT_DIR$/videotwo-svc/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,57 +170,72 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/three-question-banks-dtfweb/src/main/java/cn/marssky/dtfweb/controller/ThreequestionController.java">
+        <entry file="file://$PROJECT_DIR$/account-svc/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="95">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/account_service.log.2020-03-25.0.gz">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/videotwo-svc/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dtfweb/src/main/resources/static/forgotpassword2.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/three-question-banks-dtfweb/src/main/resources/static/three.html">
+        <entry file="file://$PROJECT_DIR$/dtfweb/src/main/java/cn/marssky/dtf/controller/VideoController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="49" column="24" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/three-question-banks-dtfweb/src/main/resources/static/tv.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-200">
-              <caret line="29" column="62" selection-start-line="29" selection-start-column="62" selection-end-line="29" selection-end-column="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/three-question-banks-dtfweb/src/main/java/cn/marssky/dtfweb/entities/Question.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="20" column="24" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="24" />
+            <state relative-caret-position="169">
+              <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#632#633#0" expanded="true" />
+                <element signature="e#686#687#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/three-question-banks-dtfweb/src/main/java/cn/marssky/dtfweb/ThreeDtfweb.java">
+        <entry file="file://$PROJECT_DIR$/dtfweb/src/main/java/cn/marssky/dtf/DtfWebApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="9" selection-start-column="9" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="114">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/three-question-banks-dtfweb/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/three-question-banks-dtfweb/log/three-question-banks-dtfweb.log">
+          <provider selected="true" editor-type-id="LogFileEditorProvider" />
         </entry>
       </file>
     </leaf>
@@ -92,22 +255,24 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="shy" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/three-question-banks-dtfweb/src/main/resources/mapper/PaymentMapper.xml" />
         <option value="$PROJECT_DIR$/three-question-banks-dtfweb/src/main/java/cn/marssky/dtfweb/dao/threequestionDao.java" />
         <option value="$PROJECT_DIR$/three-question-banks-dtfweb/src/main/java/cn/marssky/dtfweb/service/threequestionService.java" />
         <option value="$PROJECT_DIR$/three-question-banks-dtfweb/src/main/java/cn/marssky/dtfweb/service/impl/threequestionServiceImpl.java" />
         <option value="$PROJECT_DIR$/three-question-banks-dtfweb/src/main/java/cn/marssky/dtfweb/config/Durid.java" />
-        <option value="$PROJECT_DIR$/three-question-banks-dtfweb/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/three-question-banks-dtfweb/src/main/java/cn/marssky/dtfweb/entities/Page.java" />
         <option value="$PROJECT_DIR$/three-question-banks-dtfweb/src/main/java/cn/marssky/dtfweb/dao/ThreequestionDao.java" />
         <option value="$PROJECT_DIR$/three-question-banks-dtfweb/src/main/java/cn/marssky/dtfweb/entities/Question.java" />
         <option value="$PROJECT_DIR$/three-question-banks-dtfweb/src/main/resources/mapper/threequestionMapper.xml" />
-        <option value="$PROJECT_DIR$/three-question-banks-dtfweb/pom.xml" />
         <option value="$PROJECT_DIR$/three-question-banks-dtfweb/src/main/java/cn/marssky/dtfweb/entities/QuestionResult.java" />
         <option value="$PROJECT_DIR$/three-question-banks-dtfweb/src/main/java/cn/marssky/dtfweb/service/ThreequestionService.java" />
         <option value="$PROJECT_DIR$/three-question-banks-dtfweb/src/main/java/cn/marssky/dtfweb/service/impl/ThreequestionServiceImpl.java" />
@@ -115,6 +280,9 @@
         <option value="$PROJECT_DIR$/three-question-banks-dtfweb/src/main/java/cn/marssky/dtfweb/controller/ThreequestionController.java" />
         <option value="$PROJECT_DIR$/three-question-banks-dtfweb/src/main/resources/static/three.html" />
         <option value="$PROJECT_DIR$/three-question-banks-dtfweb/src/main/resources/static/tv.html" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/three-question-banks-dtfweb/pom.xml" />
+        <option value="$PROJECT_DIR$/three-question-banks-dtfweb/src/main/resources/application.properties" />
       </list>
     </option>
   </component>
@@ -144,14 +312,24 @@
           <item name="Driving-Test-Project" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="three-question-banks-dtfweb" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="three-question-banks-dtfweb" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
       </expand>
       <select />
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="776" />
+    <option name="x" value="227" />
+    <option name="y" value="50" />
     <option name="width" value="1345" />
-    <option name="height" value="1050" />
+    <option name="height" value="1045" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -161,64 +339,23 @@
     <panes>
       <pane id="PackagesPane" />
       <pane id="CatdeaLogs" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="dtonline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dtonline" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dtonline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dtonline" type="462c0819:PsiDirectoryNode" />
-              <item name="three-question-banks-dtfweb" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dtonline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dtonline" type="462c0819:PsiDirectoryNode" />
-              <item name="three-question-banks-dtfweb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dtonline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dtonline" type="462c0819:PsiDirectoryNode" />
-              <item name="three-question-banks-dtfweb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dtonline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dtonline" type="462c0819:PsiDirectoryNode" />
-              <item name="three-question-banks-dtfweb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dtonline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dtonline" type="462c0819:PsiDirectoryNode" />
-              <item name="three-question-banks-dtfweb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dtonline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dtonline" type="462c0819:PsiDirectoryNode" />
-              <item name="three-question-banks-dtfweb" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
             <path>
               <item name="dtonline" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="E:\IDEAworkSpace\DrivingOL\dtonline" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="dtonline" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dtonline" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -231,6 +368,7 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
@@ -241,21 +379,22 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.1780822" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\IDEAworkSpace\DrivingOL\dtonline\three-question-banks-dtfweb\src\main\resources\static" />
+      <recent name="E:\IDEAworkSpace\DrivingOL\dtonline\three-question-banks-dtfweb\src\main\resources\static\three" />
+      <recent name="E:\IDEAworkSpace\DrivingOL\dtonline\three-question-banks-dtfweb\src\main\resources\mapper" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="cn.marssky.dtfweb.entities" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\IDEAworkSpace\DrivingOL\dtonline\three-question-banks-dtfweb\src\main\resources\static" />
-      <recent name="E:\IDEAworkSpace\DrivingOL\dtonline\three-question-banks-dtfweb\src\main\resources\static\three" />
       <recent name="E:\IDEAworkSpace\DrivingOL\dtonline\three-question-banks-dtfweb\src\main\resources\mapper" />
     </key>
   </component>
@@ -291,6 +430,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.ThreeDtfweb" />
+        <item itemvalue="Spring Boot.ThreeDtfweb" />
+        <item itemvalue="Spring Boot.ThreeDtfweb" />
+        <item itemvalue="Spring Boot.ThreeDtfweb" />
+        <item itemvalue="Spring Boot.ThreeDtfweb" />
       </list>
     </recent_temporary>
   </component>
@@ -320,7 +463,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50736000" />
+    <option name="totallyTimeSpent" value="55893000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -333,8 +476,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31275168" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27986577" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -342,10 +486,9 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Thumbnails" weight="0.32905984" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32905984" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.042735044" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986577" weight="0.35042736" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -353,17 +496,18 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49932885" weight="0.32905984" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5013423" side_tool="true" weight="0.32905984" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4986577" weight="0.32905984" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5013423" side_tool="true" weight="0.35042736" />
       <window_info anchor="bottom" id="Spring" order="12" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
-      <window_info anchor="bottom" id="Messages" order="14" />
+      <window_info active="true" anchor="bottom" id="Messages" order="14" visible="true" weight="0.32905984" />
+      <window_info anchor="bottom" id="Thumbnails" order="15" weight="0.32905984" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Maven" order="5" visible="true" weight="0.020134227" />
+      <window_info anchor="right" id="Maven" order="5" visible="true" weight="0.25100672" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Database" order="8" />
@@ -408,102 +552,73 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Merge branch 'master' of https://github.com/zhsunbeam/DrivingOL&#10;&#10;# Conflicts:&#10;#&#9;dtonline/.idea/compiler.xml&#10;#&#9;dtonline/.idea/encodings.xml&#10;#&#9;dtonline/.idea/misc.xml&#10;#&#9;dtonline/account-api/src/main/java/cn/marssky/account/client/AccountClient.java&#10;#&#9;dtonline/account-api/target/classes/cn/marssky/account/client/AccountClient.class&#10;#&#9;dtonline/account-svc/pom.xml&#10;#&#9;dtonline/account-svc/src/main/java/cn/marssky/account/controller/AccountController.java&#10;#&#9;dtonline/account-svc/src/main/java/cn/marssky/account/service/AccountService.java&#10;#&#9;dtonline/account-svc/src/main/resources/application.properties&#10;#&#9;dtonline/account-svc/target/classes/cn/marssky/account/controller/AccountController.class&#10;#&#9;dtonline/account-svc/target/classes/cn/marssky/account/service/AccountService.class&#10;#&#9;dtonline/account_service.log&#10;#&#9;dtonline/common-lib/pom.xml&#10;#&#9;dtonline/common-lib/target/classes/cn/marssky/common/async/ContextCopyingDecorator.class&#10;#&#9;dtonline/common-lib/target/common-lib-1.0.jar&#10;#&#9;dtonline/common-lib/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst&#10;#&#9;dtonline/dtfweb/pom.xml&#10;#&#9;dtonline/pom.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/zhsunbeam/DrivingOL&#10;&#10;# Conflicts:&#10;#&#9;dtonline/.idea/compiler.xml&#10;#&#9;dtonline/.idea/encodings.xml&#10;#&#9;dtonline/.idea/misc.xml&#10;#&#9;dtonline/account-api/src/main/java/cn/marssky/account/client/AccountClient.java&#10;#&#9;dtonline/account-api/target/classes/cn/marssky/account/client/AccountClient.class&#10;#&#9;dtonline/account-svc/pom.xml&#10;#&#9;dtonline/account-svc/src/main/java/cn/marssky/account/controller/AccountController.java&#10;#&#9;dtonline/account-svc/src/main/java/cn/marssky/account/service/AccountService.java&#10;#&#9;dtonline/account-svc/src/main/resources/application.properties&#10;#&#9;dtonline/account-svc/target/classes/cn/marssky/account/controller/AccountController.class&#10;#&#9;dtonline/account-svc/target/classes/cn/marssky/account/service/AccountService.class&#10;#&#9;dtonline/account_service.log&#10;#&#9;dtonline/common-lib/pom.xml&#10;#&#9;dtonline/common-lib/target/classes/cn/marssky/common/async/ContextCopyingDecorator.class&#10;#&#9;dtonline/common-lib/target/common-lib-1.0.jar&#10;#&#9;dtonline/common-lib/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst&#10;#&#9;dtonline/dtfweb/pom.xml&#10;#&#9;dtonline/pom.xml" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/three-question-banks-dtfweb/src/main/java/cn/marssky/dtfweb.java" />
-    <entry file="file://$PROJECT_DIR$/common-lib/src/main/java/cn/marssky/common/error/GlobalExceptionTranslator.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common-lib/src/main/java/cn/marssky/common/error/ServiceException.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/account_service.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider" />
-      <provider editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/account-svc/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/three-question-banks-dtfweb/src/main/java/cn/marssky/dtfweb/log.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="38">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dtfweb/pom.xml">
+    <entry file="file://$PROJECT_DIR$/dtfweb/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/account-svc/src/main/resources/spy.properties">
+    <entry file="file://$PROJECT_DIR$/dtbweb/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/account-svc/src/main/java/cn/marssky/account/model/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
+    <entry file="file://$PROJECT_DIR$/dtbweb/src/main/resources/dtb-jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/three_question_banks_dtfweb_service.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="-513" />
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.2.RELEASE/spring-web-5.2.2.RELEASE-sources.jar!/org/springframework/web/bind/annotation/RestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/three-question-banks-dtfweb/src/main/java/cn/marssky/dtfweb/config/Durid.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/three_question_banks_dtfweb_service.log.2020-03-30.0.gz">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+        <state relative-caret-position="665">
+          <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.5.3/mybatis-3.5.3-sources.jar!/org/apache/ibatis/builder/xml/mybatis-3-mapper.dtd">
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/three-question-banks-dtfweb/log/three_question_banks_dtfweb_service.log/spring.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="-500" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/three-question-banks-dtfweb/log/spring.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="-101" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-lib/src/main/java/cn/marssky/common/api/BaseResponse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="175" selection-start-line="175" selection-end-line="175" />
+        <state relative-caret-position="171">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.10/lombok-1.18.10-sources.jar!/lombok/Data.java">
+    <entry file="file://$PROJECT_DIR$/common-lib/src/main/java/cn/marssky/common/api/ResultCode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+        <state relative-caret-position="285">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/three-question-banks-dtfweb/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.2.2.RELEASE/spring-beans-5.2.2.RELEASE-sources.jar!/org/springframework/beans/factory/support/DefaultSingletonBeanRegistry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2421">
-          <caret line="221" column="55" selection-start-line="221" selection-start-column="55" selection-end-line="221" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/three-question-banks-dtfweb/src/main/java/cn/marssky/dtfweb/entities/Page.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.29/tomcat-embed-core-9.0.29-sources.jar!/org/apache/tomcat/util/threads/TaskThread.java">
+    <entry file="file://$PROJECT_DIR$/common-lib/src/main/java/cn/marssky/common/async/ContextCopyingDecorator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="60" column="32" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/three-question-banks-dtfweb/src/main/resources/mapper/threequestionMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-37">
-          <caret line="11" column="57" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -514,9 +629,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/common-lib/src/main/java/cn/marssky/common/dto/ResponseDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-lib/src/main/java/cn/marssky/common/dto/AdminUsersDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-lib/src/main/java/cn/marssky/common/dmo/AdminUsersModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/common-lib/src/main/java/cn/marssky/common/env/EnvConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1019">
+        <state relative-caret-position="-1007">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
@@ -528,150 +664,216 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common-lib/src/main/java/cn/marssky/common/async/ContextCopyingDecorator.java">
+    <entry file="file://$PROJECT_DIR$/common-lib/src/main/java/cn/marssky/common/error/GlobalExceptionTranslator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-lib/src/main/java/cn/marssky/common/error/ServiceException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-lib/src/main/java/cn/marssky/common/exception/ParameterException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-lib/src/main/java/cn/marssky/common/Utils/ResponseUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account-svc/src/main/java/cn/marssky/account/dao/AccountDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account-svc/src/main/java/cn/marssky/account/dao/AdminUsersDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account-svc/src/main/java/cn/marssky/account/dto/AccountDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account-svc/src/main/java/cn/marssky/account/config/SwaggerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account-svc/src/main/java/cn/marssky/account/config/DataSourceConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/three-question-banks-dtfweb/pom.xml">
+    <entry file="file://$PROJECT_DIR$/account-svc/src/main/java/cn/marssky/account/config/AccountConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="74" column="4" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.29/tomcat-embed-core-9.0.29-sources.jar!/javax/servlet/http/HttpServletResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="517" column="28" selection-start-line="517" selection-start-column="28" selection-end-line="517" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common-lib/src/main/java/cn/marssky/common/api/BaseResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/three-question-banks-dtfweb/src/main/java/cn/marssky/dtfweb/dao/ThreequestionDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/account-api/src/main/java/cn/marssky/account/dto/AccountDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
+        <state relative-caret-position="59">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/three-question-banks-dtfweb/src/main/java/cn/marssky/dtfweb/service/impl/ThreequestionServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/account-svc/src/main/java/cn/marssky/account/controller/AccountController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1463">
-          <caret line="77" column="40" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="57">
+          <caret line="38" column="31" lean-forward="true" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/account-api/src/main/java/cn/marssky/account/dto/CreateAccountRequest.java">
+    <entry file="file://$PROJECT_DIR$/account-svc/src/main/java/cn/marssky/account/service/AccountService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1520">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account-svc/src/main/java/cn/marssky/account/util/SmsUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1252">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account-svc/src/main/java/cn/marssky/account/validator/NameValid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account-svc/src/main/java/cn/marssky/account/validator/SendSmsValid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account-svc/src/main/java/cn/marssky/account/validator/NameValidated.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account-svc/src/main/java/cn/marssky/account/validator/SendSmsValidated.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-188">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/three-question-banks-dtfweb.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="298">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account_service.log.2020-03-24.0.gz">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account_service.log">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="456">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account_service.log.2020-03-27.0.gz">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <caret line="11" column="57" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/three-question-banks-dtfweb/src/main/java/cn/marssky/dtfweb/service/ThreequestionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/account-api/src/main/java/cn/marssky/account/dto/GenericAccountResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common-lib/src/main/java/cn/marssky/common/api/ResultCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/three-question-banks-dtfweb/src/main/resources/static/three/bootstrap.min.css">
+    <entry file="file://$PROJECT_DIR$/account-svc/src/main/resources/spy.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/three-question-banks-dtfweb/src/main/resources/static/static/three.html" />
-    <entry file="file://$PROJECT_DIR$/three-question-banks-dtfweb/target/classes/static/tv.html">
+    <entry file="file://$PROJECT_DIR$/account-svc/src/main/resources/log4j.properties">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/three-question-banks-dtfweb/src/main/java/cn/marssky/dtfweb/entities/QuestionResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/three-question-banks-dtfweb/src/main/java/cn/marssky/dtfweb/controller/ThreequestionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/three-question-banks-dtfweb/src/main/java/cn/marssky/dtfweb/entities/Question.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="20" column="24" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/three-question-banks-dtfweb/src/main/java/cn/marssky/dtfweb/ThreeDtfweb.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="9" selection-start-column="9" selection-end-column="9" />
+        <state relative-caret-position="285">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/three-question-banks-dtfweb/src/main/resources/static/tv.html">
+    <entry file="file://$PROJECT_DIR$/three-question-banks-dtfweb/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-200">
-          <caret line="29" column="62" selection-start-line="29" selection-start-column="62" selection-end-line="29" selection-end-column="62" />
+        <state relative-caret-position="437">
+          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/three-question-banks-dtfweb/src/main/resources/static/three.html">
+    <entry file="file://$PROJECT_DIR$/three-question-banks-dtfweb/log/three-question-banks-dtfweb.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account-svc/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="49" column="24" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
+        <state relative-caret-position="95">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account_service.log.2020-03-25.0.gz">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videotwo-svc/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dtfweb/src/main/resources/static/forgotpassword2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dtfweb/src/main/java/cn/marssky/dtf/DtfWebApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dtfweb/src/main/java/cn/marssky/dtf/controller/VideoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#632#633#0" expanded="true" />
+            <element signature="e#686#687#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -725,7 +927,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>three-question-banks-dtfweb</last-edited>
+          <last-edited>common-lib</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

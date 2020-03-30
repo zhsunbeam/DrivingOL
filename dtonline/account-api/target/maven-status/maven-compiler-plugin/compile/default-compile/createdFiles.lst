@@ -1,0 +1,5 @@
+cn\marssky\account\dto\AccountDto.class
+cn\marssky\account\client\AccountClient.class
+cn\marssky\account\dto\AccountDto$AccountDtoBuilder.class
+cn\marssky\account\dto\CreateAccountRequest.class
+cn\marssky\account\dto\GenericAccountResponse.class

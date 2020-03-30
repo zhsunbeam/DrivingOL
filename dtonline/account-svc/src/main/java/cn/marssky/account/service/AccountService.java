@@ -1,113 +1,115 @@
 package cn.marssky.account.service;
 
-import cn.marssky.account.dao.AccountDao;
-import cn.marssky.account.dto.AccountDto;
-import cn.marssky.account.model.Account;
-import cn.marssky.common.error.ServiceException;
-import lombok.extern.slf4j.Slf4j;
+import cn.marssky.account.dao.AdminUsersDao;
+import cn.marssky.common.Utils.ResponseUtil;
+import cn.marssky.common.dto.AdminUsersDto;
+import cn.marssky.common.dto.ResponseDto;
+import cn.marssky.account.util.SmsUtil;
+import org.apache.log4j.Logger;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
 
-import java.time.Instant;
+import java.security.NoSuchAlgorithmException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Map;
 
-@Slf4j
 @Service
 public class AccountService {
 
+    //创建日志对象
+    Logger logger=Logger.getLogger(AccountService.class);
+
+    //创建日期格式对象
+    SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd hh-mm-ss");
+
+    //自动注入dao层对象
     @Autowired
-    AccountDao accountDao;
+    AdminUsersDao adminUsersDao;
+
+    //自动注入短信工具对象
+    @Autowired
+    SmsUtil smsUtil;
 
     private final ModelMapper modelMapper=null;
 
-    public int createAccount(String name, String email, String phoneNumber) {
+//    public int createAccount(String name, String email, String phoneNumber) {
+//        return accountDao.createAccount();
+//    }
 
-
-
-        return accountDao.createAccount();
+    //注册
+    public ResponseDto signup(AdminUsersDto adminUsersDto) throws NoSuchAlgorithmException {
+        //判断验证码是否正确，如果错误返回响应对象
+        if (!adminUsersDto.getCaptcha().equals(smsUtil.querySendDetails(adminUsersDto.getPhone(),adminUsersDto.getBizId()))){
+            return new ResponseDto(400,"验证码错误",null,false);
+        }
+        //给密码加密
+        adminUsersDto.setEncryptedPassword();
+        //设置账号修改日期
+        adminUsersDto.setUpdatedAt(simpleDateFormat.format(new Date()));
+        //设置账号创建日期
+        adminUsersDto.setCreatedAt(simpleDateFormat.format(new Date()));
+        //调用dao层注册方法，并返回结果，如果结果大于0记录日志后返回成功响应对象
+        if (adminUsersDao.signup(adminUsersDto)>0){
+            logger.info("手机号码为:"+adminUsersDto.getPhone()+"的用户注册成功");
+            return new ResponseDto(200,"注册成功",null,true);
+        }
+        logger.error("手机号码为:"+adminUsersDto.getPhone()+"的用户由于未知原因注册失败");
+        return ResponseUtil.createErrorResponseDto();
     }
 
-    public AccountDto getOrCreate(String name, String email, String phoneNumber) {
-
-        // 检查用户是否已注册过, 需要调用DAO判断
-        Account existingAccount = null;
-        if (StringUtils.hasText(email)) {
-            existingAccount = new Account();//accountDao.findAccountByEmail(email);
+    //效验验证码
+    public ResponseDto examineCaptcha(AdminUsersDto adminUsersDto){
+        //效验验证码是否正确，如果正确则返回成功响应对象
+        if(adminUsersDto.getCaptcha().
+                equals(smsUtil.querySendDetails(adminUsersDto.getPhone(), adminUsersDto.getBizId()))){
+            return new ResponseDto(200,"验证码正确",null,true);
         }
-        // 检查用户是否注册过，使用电话号码为参数 需要调用DAO判断
-        if (existingAccount == null && StringUtils.hasText(phoneNumber)) {
-            existingAccount = new Account();//accountDao.findAccountByPhoneNumber(phoneNumber);
-        }
-
-        //如果查询得到，则返回对象,返回前需要将dto与dmo转换
-        if (existingAccount != null) {
-            return this.convertToDto(existingAccount);
-        }
-        return this.create(name, email, phoneNumber);
-    }
-
-    //DTO和DMO之前相互转换
-    private AccountDto convertToDto(Account account) {
-        return modelMapper.map(account, AccountDto.class);
-    }
-
-    private Account convertToModel(AccountDto accountDto) {
-        return modelMapper.map(accountDto, Account.class);
+        return new ResponseDto(400,"验证码错误",null,false);
     }
 
 
-
-    //创建会员账号
-    public AccountDto create(String name, String email, String phoneNumber) {
-        if (StringUtils.hasText(email)) {
-            // 检查是否存在
-            Account foundAccount = new Account();//accountDao.findAccountByEmail(email);
-            if (foundAccount != null) {
-                throw new ServiceException("用户已存在，请重新输入Email");
-            }
+    //登录
+    public ResponseDto login(AdminUsersDto adminUsersDto) throws NoSuchAlgorithmException {
+        //给密码加密
+        adminUsersDto.setEncryptedPassword();
+        //调用dao层方法，返回结果
+        String result=adminUsersDao.login(adminUsersDto);
+        //判断结果是否为空，如果不为空记录日志后返回成功响应对象
+        if (result!=null){
+            logger.info("手机号码为:"+adminUsersDto.getPhone()+"的用户登录成功");
+            return new ResponseDto(200,"登录成功",result,true);
         }
-        if (StringUtils.hasText(phoneNumber)) {
-            Account foundAccount = new Account();//accountDao.findAccountByPhoneNumber(phoneNumber);
-            if (foundAccount != null) {
-                throw new ServiceException("用户已存在，请重新输入电话号码");
-            }
-        }
-
-        // 名字，邮箱，电话不能为空
-        if (name == null) {
-            name = "";
-        }
-        if (email == null) {
-            email = "";
-        }
-        if (phoneNumber == null) {
-            phoneNumber = "";
-        }
-        //根据传入的数据创建Account对象
-        Account account = Account.builder()
-                .email(email).name(name).phoneNumber(phoneNumber)
-                .build();
-        account.setPhotoUrl(account.getEmail());
-        account.setMemberSince(Instant.now());
-
-        try {
-            //创建会员
-            //accountDao.save(account);
-        } catch (Exception ex) {
-            String errMsg = "不能创建会员";
-            //此处记录日志
-            throw new ServiceException(errMsg, ex);
-        }
-
-
-        if (StringUtils.hasText(email)) {
-            //此处应该发送邮箱验证
-
-        }
-
-
-        AccountDto accountDto = this.convertToDto(account);
-        return accountDto;
+        logger.info("手机号码为:"+adminUsersDto.getPhone()+"的用户由于用户名或密码错误登陆失败");
+        return new ResponseDto(400,"用户名或密码错误",null,false);
     }
+
+    //发送短信
+    public ResponseDto sendSms(Map<String,String> map){
+        //调用短信工具发送短信，并记录日志
+        String result=smsUtil.sendSms(map.get("state"),map.get("phone"));
+        if ("0".equals(map.get("state"))){
+            logger.info("向手机号码为:"+map.get("phone")+"的用户送了一条注册短信");
+        }else if ("1".equals(map.get("state"))){
+            logger.info("向手机号码为:"+map.get("phone")+"的用户送了一条修改短信");
+        }
+        return new ResponseDto(200,"发送成功",result,true);
+    }
+
+    //忘记密码
+    public ResponseDto forgetPassword(AdminUsersDto adminUsersDto) throws NoSuchAlgorithmException {
+        //给密码加密
+        adminUsersDto.setEncryptedPassword();
+        //设置账号修改日期
+        adminUsersDto.setUpdatedAt(simpleDateFormat.format(new Date()));
+        //调用dao层修改密码并返回结果，判断结果是否大于0，如果大于0记录日志后返回成功响应对象
+        if(adminUsersDao.forgetPassword(adminUsersDto)>0){
+            logger.info("手机号码为:"+adminUsersDto.getPhone()+"的用户修改了密码");
+            return new ResponseDto(200,"修改密码成功",null,true);
+        }
+        logger.error("手机号码为:"+adminUsersDto.getPhone()+"的用户由于未知原因修改密码失败");
+        return ResponseUtil.createErrorResponseDto();
+    }
+
 }

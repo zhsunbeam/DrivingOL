@@ -1,8 +1,0 @@
-cn\marssky\dtfweb\ThreeDtfweb.class
-cn\marssky\dtfweb\dao\ThreequestionDao.class
-cn\marssky\dtfweb\config\Durid.class
-cn\marssky\dtfweb\service\ThreequestionService.class
-cn\marssky\dtfweb\service\impl\ThreequestionServiceImpl.class
-cn\marssky\dtfweb\controller\ThreequestionController.class
-cn\marssky\dtfweb\entities\QuestionResult.class
-cn\marssky\dtfweb\entities\Question.class
